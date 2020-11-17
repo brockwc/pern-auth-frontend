@@ -5,6 +5,10 @@ import Home from '../pages/Home'
 import Register from '../pages/Register'
 import Login from '../pages/Login'
 import Profile from '../pages/Profile'
+import AllTeas from "../pages/AllTeas"
+import OneTea from "../pages/OneTea"
+import AllBenefits from "../pages/AllBenefits"
+import OneBenefit from "../pages/OneBenefit"
 
 const PrivateRoute = ({ component: Component, ...rest }) => {
   const currentUser = localStorage.getItem('id')
@@ -16,9 +20,13 @@ const PrivateRoute = ({ component: Component, ...rest }) => {
 
 const Routes = (props) => (
   <Switch>
-    <Route exact path='/' component={ Home } />
-    <Route path='/register' component={ Register } />
-    <Route path='/login' render={ (routeComponentProps) => {
+    <Route exact path = '/' component = { Home } />
+    <Route exact path = "/allteas" component = { AllTeas } />
+    <Route exact path = "/onetea" component = { OneTea } />
+    <Route exact path = "/allbenefits" component = { AllBenefits } />
+    <Route exact path = "/onebenefit" component = { OneBenefit } />
+    <Route path = '/register' component = { Register } />
+    <Route path = '/login' render = { (routeComponentProps) => {
       return  <Login 
                 {...routeComponentProps}
                 // more props to come here
