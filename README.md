@@ -1,6 +1,3 @@
-# PERN Frontend Template
-> Note: Built to work with [this repo](https://github.com/brockwc/pern-auth-backend).
-
 # Soul Sip'n
 When people think of teas, they tend to think of "black tea", "green tea", "herbal tea", etc., but not many people tend to think of the specific _types_ of teas. For instance, "Matcha Tea" is a specific _type_ of Japanese green tea that is ceremoniously whisked into a frothy brew.
 
@@ -16,6 +13,7 @@ For Soul Sip'n we used many different technologies.
 - Node.js
 
 ## Getting Started
+The team decided to work on the project in many different ways. Lauren and Brock tackled the challenging database structure and seeding information while Jamie handled the front-end portion of CSS and page creations.
 
 ## Unsolved Problems
 
