@@ -7,18 +7,22 @@ const Header = (props) => {
     <header>
       <div className="logo">
         <Link to={'/'}>Home!</Link>
+        <ul>
+          <li><Link to = {"/allteas"}>All Teas</Link></li>
+          <li><Link to = {"/allbenefits"}>All Benefits</Link></li>
+        </ul>
       </div>
       <div className="links">
         <ul>
           { props.currentUser ? 
             <>
-              <li><Link to={'/profile'}>Profile</Link></li>
-              <li><a href="/logout" onClick={ props.logout }>Log Out</a></li>
+              <li><Link to = {'/profile'}>Profile</Link></li>
+              <li><a href = "/logout" onClick={ props.logout }>Log Out</a></li>
             </>
           :
             <>
-              <li><Link to={'/register'}>Register</Link></li>
-              <li><Link to={'/login'}>Login</Link></li>
+              <li><Link to = {'/register'}>Register</Link></li>
+              <li><Link to = {'/login'}>Login</Link></li>
             </>
           }
         </ul>
