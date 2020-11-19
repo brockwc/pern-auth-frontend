@@ -11,6 +11,19 @@ class BenefitModel {
   static show = (benefitId) => {
     return fetch(`${REACT_APP_API_URL}/allbenefits/${benefitId}`).then(res => res.json())
   }
+
+  static create = (userBenefitData) => {
+    return fetch(`${REACT_APP_API_URL}/allbenefits`, {
+      method: "POST",
+      headers: {
+        "Content-Type": "application/json"
+      },
+      body: JSON.stringify(userBenefitData)
+    })
+      .then(res => res.json())
+  }
 }
+
+
 
 export default BenefitModel;
