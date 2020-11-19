@@ -1,12 +1,12 @@
 import { useState, useEffect } from 'react'
-import UserModel from "../models/user"
+import BenefitModel from "../models/benefit"
 
 const useBenefits = () => {
   const [benefits, setBenefits] = useState ([])
 
   const fetchBenefits = () => {
-    UserModel.all().then(data => {
-      setBenefits( data.teas )
+    BenefitModel.all().then(data => {
+      setBenefits( data.benefits )
     })
   }
 

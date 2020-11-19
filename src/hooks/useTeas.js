@@ -1,11 +1,13 @@
 import {useState, useEffect} from "react"
-import UserModel from "../models/user"
+import TeaModel from "../models/tea"
 
 const useTeas = () => {
   const [teas, setTeas] = useState ([])
 
   const fetchTeas = () => {
-    UserModel.all().then(data => {
+    TeaModel.all().then(data => {
+      console.log("Does this work?")
+      console.log(data)
       setTeas( data.teas )
     })
   }

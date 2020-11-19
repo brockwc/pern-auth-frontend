@@ -11,7 +11,7 @@ const AllBenefits = (props) => {
 
   const generatedList = () => {
     return benefits.map((benefit, index) => (
-      <Link to = {`/onebenefit/${benefit.id}`} key = {index}>
+      <Link to = {`/allbenefits/${benefit.id}`} key = {index}>
         <BenefitCard {...benefits} />
       </Link>
     ))
@@ -26,7 +26,7 @@ const AllBenefits = (props) => {
       <button onClick = {fetchBenefits} >Get Benefits</button>
 
       <p>Clicking the button below should replicate a user clicking on the name of a tea that they like.</p>
-      <form action="/onebenefit">
+      <form action="/allbenefits">
         <button type = "submit">Here's a benefit you like</button>
       </form>
     </div>

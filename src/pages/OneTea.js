@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react'
 
-import UserModel from "../models/user";
+import TeaModel from "../models/tea";
 import TeaCard from "../components/TeaCard";
 
 const OneTea = (props) => {
@@ -13,7 +13,7 @@ const OneTea = (props) => {
   }, [])
 
   const fetchData = () => {
-    UserModel.show(currentTea).then(data => {
+    TeaModel.show(currentTea).then(data => {
       setTea( data.tea )
     })
   }

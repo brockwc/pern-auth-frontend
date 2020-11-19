@@ -9,18 +9,15 @@ const AllTeas = (props) => {
   // with Class state = { prop: value }
   // with hooks [state, setState] = useState(initialValue)
   // we are gonna use our hook
-  const [teas, fetchTeas] = useTeas([])
+  const [teas, fetchTeas] = useTeas()
 
   const generatedList = () => {
     return teas.map((tea, index) => (
-      <Link to = {`/onetea/${tea.id}`} key = {index}>
+      <Link to = {`/allteas/${tea.id}`} key = {index}>
         <TeaCard {...teas} />
       </Link>
     ))
   }
-
-
-
 
   return (
     <div>
@@ -28,7 +25,7 @@ const AllTeas = (props) => {
       <p>This page should display all teas by their name the moment the page is loaded</p>
       { teas.length ? generatedList() : "Loading..." }
       <button onClick = {fetchTeas} >Get Teas</button>
-      <form action="/onetea">
+      <form action="/allteas/:id">
         <button type = "submit" onClick = {fetchTeas}>Here's a tea you like and want to click</button>
       </form>
     </div>

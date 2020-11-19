@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from 'react'
 
-import UserModel from "../models/user";
-import BenefitCard from "../components/TeaCard";
+import BenefitModel from "../models/benefit";
+import BenefitCard from "../components/BenefitCard";
 
 const OneBenefit = (props) => {
   const [benefit, setBenefit] = useState()
@@ -13,7 +13,7 @@ const OneBenefit = (props) => {
   }, [])
 
   const fetchData = () => {
-    UserModel.show(currentBenefit).then(data => {
+    BenefitModel.show(currentBenefit).then(data => {
       setBenefit( data.benefit )
     })
   }
