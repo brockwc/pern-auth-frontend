@@ -16,7 +16,7 @@ a {
   text-decoration: none;
 }
 
-.TeaCard, .BenefitCard {
+.TeaCard, .BenefitCard, .RegDiv {
   width: 70%;
   margin: auto;
   padding: 15px;
@@ -33,4 +33,9 @@ a {
 .TeaCard > p {
   text-align: left;
   padding-left: 20%;
+}
+
+.RegDiv {
+  max-width: 300px;
+  text-align: right;
 }
