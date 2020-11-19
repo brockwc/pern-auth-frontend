@@ -11,7 +11,7 @@ const AllTeas = (props) => {
   const generatedList = () => {
     return teas.map((tea, index) => (
       <Link to = {`/allteas/${tea.id}`} key = {index}>
-        <TeaCard {...teas} />
+        <TeaCard tea = {tea} />
       </Link>
     ))
   }
