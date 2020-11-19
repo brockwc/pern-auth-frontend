@@ -10,9 +10,10 @@ const AllBenefits = (props) => {
 
   const generatedList = () => {
     return benefits.map((benefit, index) => (
-      <Link to = {`/allbenefits/${benefit.id}`} key = {index}>
-        <BenefitCard benefit = {benefit} />
-      </Link>
+      <>
+      {/* {`/allbenefits/${benefit.id}`} key = {index} */}
+        <BenefitCard benefit = {benefit} key = {index} />
+        </>
     ))
   }
 
