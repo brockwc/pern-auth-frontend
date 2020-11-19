@@ -1,6 +1,8 @@
-import React from 'react'
+import React, {useState} from 'react'
+import TeaModel from '../models/tea'
 
 function AllTeas() {
+
   return (
     <div>
       <h1>Here's all of our teas</h1>

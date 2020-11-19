@@ -22,9 +22,9 @@ const Routes = (props) => (
   <Switch>
     <Route exact path = '/' component = { Home } />
     <Route exact path = "/allteas" component = { AllTeas } />
-    <Route exact path = "/onetea" component = { OneTea } />
+    <Route exact path = "/allteas/:id" component = { OneTea } />
     <Route exact path = "/allbenefits" component = { AllBenefits } />
-    <Route exact path = "/onebenefit" component = { OneBenefit } />
+    <Route exact path = "/allbenefits/:id" component = { OneBenefit } />
     <Route path = '/register' component = { Register } />
     <Route path = '/login' render = { (routeComponentProps) => {
       return  <Login 
