@@ -21,10 +21,10 @@ const PrivateRoute = ({ component: Component, ...rest }) => {
 const Routes = (props) => (
   <Switch>
     <Route exact path = '/' component = { Home } />
-    <Route exact path = "/allteas" component = { AllTeas } />
-    <Route exact path = "/allteas/:id" component = { OneTea } />
-    <Route exact path = "/allbenefits" component = { AllBenefits } />
-    <Route exact path = "/allbenefits/:id" component = { OneBenefit } />
+    <Route path = "/allteas" component = { AllTeas } />
+    <Route path = "/allteas/:id" component = { OneTea } />
+    <Route path = "/allbenefits" component = { AllBenefits } />
+    <Route path = "/allbenefits/:id" component = { OneBenefit } />
     <Route path = '/register' component = { Register } />
     <Route path = '/login' render = { (routeComponentProps) => {
       return  <Login 

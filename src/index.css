@@ -25,12 +25,12 @@ a {
   border-radius: 10px;
 }
 
-.oneTea > h3 {
+.TeaCard > h3 {
   text-align: left;
   padding-left: 10%;
 }
 
-.oneTea > p {
+.TeaCard > p {
   text-align: left;
   padding-left: 20%;
 }
