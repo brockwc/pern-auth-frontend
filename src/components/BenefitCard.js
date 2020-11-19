@@ -1,6 +1,7 @@
 import React from 'react';
 
 const BenefitCard = (props) => {
+  
   return (
     <div className="BenefitCard">
 

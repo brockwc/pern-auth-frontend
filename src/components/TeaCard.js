@@ -6,7 +6,6 @@ const TeaCard = (props) => {
   //   for(i = 0; i > tea.length; i++)
   // }
 
-
   return (
     <div className="TeaCard">
       <h3><u>Name:</u> { props.tea.name }</h3>

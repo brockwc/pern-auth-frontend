@@ -10,16 +10,16 @@ const AllTeas = (props) => {
 
   const generatedList = () => {
     return teas.map((tea, index) => (
-      <Link to = {`/allteas/${tea.id}`} key = {index}>
-        <TeaCard tea = {tea} />
-      </Link>
+
+        <Link to = {`/allteas/${tea.id}`} key = {index}>
+          <TeaCard tea = {tea} />
+        </Link>
     ))
   }
 
   return (
     <div>
       <h1>Here's all of our teas</h1>
-      <p>This page should display all teas by their name the moment the page is loaded</p>
       { teas.length ? generatedList() : "Loading..." }
     </div>
   )
