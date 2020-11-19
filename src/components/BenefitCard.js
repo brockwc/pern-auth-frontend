@@ -4,8 +4,10 @@ const BenefitCard = (props) => {
   return (
     <div className="BenefitCard">
 
-      <h3>Benefits:</h3>
-        <p>{ props.benefit.name }</p>
+        <h3>{ props.benefit.name }</h3>
+        <form action = "/allbenefits/:id">
+          <button type = "submit">Save Benefit</button>
+        </form>
 
     </div>
   );

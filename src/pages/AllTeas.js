@@ -21,10 +21,6 @@ const AllTeas = (props) => {
       <h1>Here's all of our teas</h1>
       <p>This page should display all teas by their name the moment the page is loaded</p>
       { teas.length ? generatedList() : "Loading..." }
-      <button onClick = {fetchTeas} >Get Teas</button>
-      <form action = "/allteas/:id">
-        <button type = "submit" onClick = {fetchTeas}>Here's a tea you like and want to click</button>
-      </form>
     </div>
   )
 }
