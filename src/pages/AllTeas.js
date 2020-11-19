@@ -7,11 +7,11 @@ import useTeas from "../hooks/useTeas";
 
 const AllTeas = (props) => {
   const [teas, fetchTeas] = useTeas()
-
+  console.log(teas.length && teas[1].benefits)
   const generatedList = () => {
     return teas.map((tea, index) => (
-      <Link to = {`/allteas/${tea.id}`} key = {index}>
-        <TeaCard tea = {tea} />
+      <Link to={`/allteas/${tea.id}`} key={index}>
+        <TeaCard tea={tea} />
       </Link>
     ))
   }
@@ -20,10 +20,9 @@ const AllTeas = (props) => {
     <div>
       <h1>Here's all of our teas</h1>
       <p>This page should display all teas by their name the moment the page is loaded</p>
-      { teas.length ? generatedList() : "Loading..." }
-      <button onClick = {fetchTeas} >Get Teas</button>
+      { teas.length ? generatedList() : "Loading..."}
       <form action="/allteas/:id">
-        <button type = "submit" onClick = {fetchTeas}>Here's a tea you like and want to click</button>
+        <button type="submit" onClick={fetchTeas}>Here's a tea you like and want to click</button>
       </form>
     </div>
   )
