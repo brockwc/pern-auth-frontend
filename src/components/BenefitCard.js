@@ -5,8 +5,7 @@ const BenefitCard = (props) => {
     <div className="BenefitCard">
 
       <h3>Benefits:</h3>
-        <p>Display the super powers from drinking this</p>
-        { props.benefit }
+        <p>{ props.benefit.name }</p>
 
     </div>
   );
