@@ -5,6 +5,8 @@ body {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   font-family: 'Ubuntu', sans-serif;
+  color: white;
+  text-shadow: 2px 1px black;
 }
 
 code {
@@ -17,7 +19,8 @@ a {
 }
 
 .TeaCard, .BenefitCard {
-  width: 70%;
+  width: 90%;
+  font-size: 0.5em;
   margin: auto;
   padding: 15px;
   background: rgba(209, 209, 209, 0.8);

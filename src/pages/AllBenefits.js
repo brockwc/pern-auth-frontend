@@ -21,17 +21,17 @@ const AllBenefits = (props) => {
   return (
     <div>
       <h1>Here are benefits!</h1>
-
       <p>This page should display all teas by their name the moment the page is loaded</p>
       { benefits.length ?
-        <Container>
+        <Container fluid>
           <Row>
             {
               generatedList()
             }
           </Row>
         </Container>
-      : "Loading..." }</div>
+      : "Loading..." }
+    </div>
   )
 }
 

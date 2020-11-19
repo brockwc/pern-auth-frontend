@@ -1,9 +1,6 @@
 import React from 'react';
 
 const TeaCard = (props) => {
-  // const teaLoop = () => {
-  //   for(i = 0; i > tea.length; i++)
-  // }
 
   return (
     <div className="TeaCard">
