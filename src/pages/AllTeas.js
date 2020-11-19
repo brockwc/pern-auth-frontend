@@ -7,11 +7,11 @@ import useTeas from "../hooks/useTeas";
 
 const AllTeas = (props) => {
   const [teas, fetchTeas] = useTeas()
-
+  console.log(teas.length && teas[1].benefits)
   const generatedList = () => {
     return teas.map((tea, index) => (
-      <Link to = {`/allteas/${tea.id}`} key = {index}>
-        <TeaCard tea = {tea} />
+      <Link to={`/allteas/${tea.id}`} key={index}>
+        <TeaCard tea={tea} />
       </Link>
     ))
   }
