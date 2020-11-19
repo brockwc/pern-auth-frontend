@@ -1,5 +1,5 @@
 import React from 'react'
-
+import { Container, Row, Col } from "react-bootstrap"
 import { Link } from "react-router-dom";
 import BenefitCard from "../components/BenefitCard";
 
@@ -10,9 +10,11 @@ const AllBenefits = (props) => {
 
   const generatedList = () => {
     return benefits.map((benefit, index) => (
-      <Link to = {`/allbenefits/${benefit.id}`} key = {index}>
-        <BenefitCard benefit = {benefit} />
-      </Link>
+      <Col xs = {4}>
+        <Link to = {`/allbenefits/${benefit.id}`} key = {index}>
+          <BenefitCard benefit = {benefit} />
+        </Link>
+      </Col>
     ))
   }
 
@@ -21,8 +23,15 @@ const AllBenefits = (props) => {
       <h1>Here are benefits!</h1>
 
       <p>This page should display all teas by their name the moment the page is loaded</p>
-      { benefits.length ? generatedList() : "Loading..." }
-    </div>
+      { benefits.length ?
+        <Container>
+          <Row>
+            {
+              generatedList()
+            }
+          </Row>
+        </Container>
+      : "Loading..." }</div>
   )
 }
 

@@ -1,5 +1,4 @@
 import React from 'react';
-import AllBenefits from "../pages/AllBenefits"
 
 const TeaCard = (props) => {
   // const teaLoop = () => {
