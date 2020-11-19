@@ -1,4 +1,5 @@
 import React from 'react';
+import AllBenefits from "../pages/AllBenefits"
 
 const TeaCard = (props) => {
   // const teaLoop = () => {
@@ -8,18 +9,12 @@ const TeaCard = (props) => {
 
   return (
     <div className="TeaCard">
-      <h3>Name:</h3>
-      { props.tea.name}
-      <h3>Benefits:</h3>
-      {/* { props.tea.benefits[1].name} */}
-      <h3>Type:</h3>
-      { props.tea.type}
-      <h3>Description:</h3>
-      { props.tea.description}
+      <h3><u>Name:</u> { props.tea.name }</h3>
+      <h3><u>Benefits:</u> {/* { props.tea.benefit.name } */}</h3>
+      <h3><u>Type:</u> { props.tea.type }</h3>
+      <h3><u>Description:</u> { props.tea.description }</h3>
     </div>
   );
 }
-
-
 
 export default TeaCard;
