@@ -1,22 +1,28 @@
-import React from 'react'
+import React, { useState, useEffect } from 'react'
 
-function OneTea() {
+import TeaModel from "../models/tea";
+import TeaCard from "../components/TeaCard";
+
+const OneTea = (props) => {
+  const [tea, setTea] = useState()
+  const [currentTea, setCurrentTea] = useState(props.match.params.id)
+
+
+  useEffect(() => {
+    fetchData()
+  }, [])
+
+  const fetchData = () => {
+    TeaModel.show(currentTea).then(data => {
+      setTea( data.tea )
+    })
+  }
+
   return (
     <div className = "oneTea">
       <h1>Here is your tea of choice!</h1>
-
-      <h3>Name:</h3>
-        <p>New Tea, Who dis?</p>
-        {/* oneTea.data.name */}
-      <h3>Benefits:</h3>
-        <p>Display the super powers from drinking this</p>
-        {/* oneTea.data.benefits */}
-      <h3>Type:</h3>
-        <p>Oooo gurl, what's yo type?</p>
-        {/* oneTea.data.type */}
-      <h3>Description:</h3>
-        <p>In a far off place, in a bush from a land, came the tea leaf and a description.</p>
-        {/* oneTea.data.description */}
+      <hr />
+      <TeaCard {...tea} />
     </div>
   )
 }
