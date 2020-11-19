@@ -6,7 +6,6 @@ import BenefitCard from "../components/BenefitCard";
 import useBenefits from "../hooks/useBenefits";
 
 const AllBenefits = (props) => {
-
   const [benefits, fetchBenefits] = useBenefits([])
 
   const generatedList = () => {

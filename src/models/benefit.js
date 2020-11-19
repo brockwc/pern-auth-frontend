@@ -4,6 +4,7 @@ class BenefitModel {
 
   static all = () => {
     // Calling the index method in the API controller
+    console.log("Skadoosh")
     return fetch(`${REACT_APP_API_URL}/allbenefits`).then(res => res.json())
   }
 
@@ -11,3 +12,5 @@ class BenefitModel {
     return fetch(`${REACT_APP_API_URL}/allbenefits/${benefitId}`).then(res => res.json())
   }
 }
+
+export default BenefitModel;

@@ -6,9 +6,6 @@ import TeaCard from "../components/TeaCard";
 import useTeas from "../hooks/useTeas";
 
 const AllTeas = (props) => {
-  // with Class state = { prop: value }
-  // with hooks [state, setState] = useState(initialValue)
-  // we are gonna use our hook
   const [teas, fetchTeas] = useTeas()
 
   const generatedList = () => {

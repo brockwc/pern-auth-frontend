@@ -6,8 +6,6 @@ const useTeas = () => {
 
   const fetchTeas = () => {
     TeaModel.all().then(data => {
-      console.log("Does this work?")
-      console.log(data)
       setTeas( data.teas )
     })
   }
