@@ -1,23 +1,25 @@
 import React from 'react';
 
 const TeaCard = (props) => {
-  console.log(props.tea.name)
+  // const teaLoop = () => {
+  //   for(i = 0; i > tea.length; i++)
+  // }
+
+
   return (
     <div className="TeaCard">
-      <p>{props.tea.name}</p>
-      <p>{ props.benefit }</p>
+      <h3>Name:</h3>
+        { props.tea.name }
+      <h3>Benefits:</h3>
+        {/* { props.benefit.name } */}
+      <h3>Type:</h3>
+        { props.tea.type }
+      <h3>Description:</h3>
+        { props.tea.description }
     </div>
   );
 }
 
-{/* 
-      <h3>Name:</h3>
-        { props.name }
-      <h3>Benefits:</h3>
-        { props.benefits }
-      <h3>Type:</h3>
-        { props.type }
-      <h3>Description:</h3>
-        { props.description } */}
+      
 
 export default TeaCard;
