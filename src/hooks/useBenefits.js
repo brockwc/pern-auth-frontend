@@ -3,6 +3,13 @@ import BenefitModel from "../models/benefit"
 
 const useBenefits = () => {
   const [benefits, setBenefits] = useState ([])
+  const [userBenefits, setUserBenefits] = useState([])
+
+  const createUserBenefit = () => {
+    BenefitModel.create().then(data => {
+      setUserBenefits(data.userBenefits)
+    })
+  }
 
   const fetchBenefits = () => {
     BenefitModel.all().then(data => {
@@ -11,7 +18,8 @@ const useBenefits = () => {
   }
 
   useEffect(() => {
-    fetchBenefits();
+    fetchBenefits()
+    createUserBenefit()
   }, [])
 
   // return state and our updater function

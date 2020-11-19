@@ -1,6 +1,5 @@
 import React from 'react'
 
-import { Link } from "react-router-dom";
 import BenefitCard from "../components/BenefitCard"
 
 import useBenefits from "../hooks/useBenefits";
