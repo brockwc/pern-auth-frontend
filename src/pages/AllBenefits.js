@@ -25,7 +25,7 @@ const AllBenefits = (props) => {
       <button onClick = {fetchBenefits} >Get Benefits</button>
 
       <p>Clicking the button below should replicate a user clicking on the name of a tea that they like.</p>
-      <form action="/allbenefits">
+      <form action = "/allbenefits/:id">
         <button type = "submit">Here's a benefit you like</button>
       </form>
     </div>
