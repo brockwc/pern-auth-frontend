@@ -1,10 +1,34 @@
 import React from 'react'
 
-function AllBenefits() {
+import { Link } from "react-router-dom";
+import AllBenefits from "../pages/AllBenefits";
+import BenefitCard from "../components/BenefitCard"
+
+import useBenefits from "../hooks/useBenefits";
+
+const AllBenefits2 = (props) => {
+  const [benefits, fetchBenefits] = useBenefits([])
+
+  const generatedList = () => {
+    return benefits.map((benefit, index) => (
+      <Link to = {`/allbenefits/${benefit.id}`} key = {index}>
+        <BenefitCard benefit={benefit} />
+      </Link>
+    ))
+  }
+
   return (
     <div>
       <h1>Here are benefits!</h1>
-      {/* <button onClick = >Here's a benefit you like</button> */}
+
+      <p>This page should display all teas by their name the moment the page is loaded</p>
+      { benefits.length ? generatedList() : "Loading..." }
+      <button onClick = {fetchBenefits} >Get Benefits</button>
+
+      <p>Clicking the button below should replicate a user clicking on the name of a tea that they like.</p>
+      <form action="/allbenefits">
+        <button type = "submit">Here's a benefit you like</button>
+      </form>
     </div>
   )
 }
