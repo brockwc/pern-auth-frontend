@@ -1,6 +1,18 @@
 const REACT_APP_API_URL = "http://localhost:4000/api/v1"
 
-export default class UserModel {
+class UserModel {
+
+  // Accessed as UserModel.all()
+  static all = () => {
+    // Calling the index method in the API controller
+    return fetch(`${REACT_APP_API_URL}/allteas`).then(res => res.json())
+  }
+
+  // Accessed as GameModel.show(gameId)
+  static show = (teaId) => {
+    return fetch(`${REACT_APP_API_URL}/teas/${teaId}`).then(res => res.json())
+  }
+
   static create(data) {
     return fetch(`${REACT_APP_API_URL}/auth/register`, {
       method: "POST",
@@ -31,3 +43,5 @@ export default class UserModel {
     })
   }
 }
+
+export default UserModel;
