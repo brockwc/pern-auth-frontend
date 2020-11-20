@@ -10,7 +10,7 @@ const AllTeas = (props) => {
 
   const generatedList = () => {
     return teas.map((tea, index) => (
-      <Col xs={6}>
+      <Col xs={4}>
         <Link to = {`/allteas/${tea.id}`} key = {index}>
           <TeaCard tea = {tea} />
         </Link>

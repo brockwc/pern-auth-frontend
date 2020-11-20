@@ -18,22 +18,28 @@ a {
   text-decoration: none;
 }
 
+.col-4 {
+  padding: 0;
+}
+
 .TeaCard, .BenefitCard {
-  width: 90%;
-  font-size: 0.5em;
-  margin: auto;
-  padding: 15px;
+  width: 95%;
+  font-size: 1.5em;
+  margin: 5px;
+  padding: 5px;
+  padding-right: 10px;
   background: rgba(209, 209, 209, 0.8);
   border: solid 2px black;
   border-radius: 10px;
+  align-items: stretch;
 }
 
 .TeaCard > h3 {
   text-align: left;
-  padding-left: 10%;
+  padding-left: 5%;
 }
 
 .TeaCard > p {
   text-align: left;
-  padding-left: 20%;
+  padding-left: 10%;
 }
