@@ -1,37 +1,28 @@
-import React from 'react';
+import React, { useState, useEffect } from 'react'
+import UserBenefitCard from '../components/UserBenefitCard';
+import UserBenefitModel from "../models/userBenefit";
 
-const Profile = props => {
+const Profile = (props) => {
+  const [userBenefits, setUserBenefits] = useState([])
+
+  const fetchUserBenData = () => {
+    UserBenefitModel.all().then(data => {
+        console.log(data.userBenefits)
+        setUserBenefits(data.userBenefits)
+    })
+}
+
+useEffect(() => {
+  fetchUserBenData()
+}, [])
+
+
   return (
     <div>
       <h1>Profile of user with ID { props.currentUser }</h1>
-      
-    {/* <h1>{make a fetch request to get this users benefits.}</h1> */}
-
-      <h3>What did you need?</h3>
-        <p>Here is your list of saved benefits</p>
-        <ul>
-          <li>Hey You!</li>
-          <li>Create a list</li>
-          <li>Of the user's saved benefits!</li>
-        </ul>
-
-      <h3>Have you steeped these?</h3>
-        <p>Here's a list of random teas with your selected benefits</p>
-        <ul>
-          <li>This is a stretch goal</li>
-          <li>But it would be cool</li>
-          <li>To display random teas</li>
-          <li>That have been selected by the user</li>
-        </ul>
-
-      <h3>Relax with your favorites</h3>
-        <p>Here's a list of your favorite teas</p>
-        <ul>
-          <li>This is also a stretch goal</li>
-          <li>This would display</li>
-          <li>The user's favorite teas</li>
-          <li>Going from newest to oldest</li>
-        </ul>
+      {userBenefits.map((userBenefit, index) => {
+        return <p>{userBenefit.name}</p>
+      })}
     </div>
     
   )
