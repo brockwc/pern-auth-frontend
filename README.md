@@ -16,6 +16,9 @@ For Soul Sip'n we used many different technologies.
 The team decided to work on the project in many different ways. Lauren and Brock tackled the challenging database structure and seeding information while Jamie handled the front-end portion of CSS and page creations.
 
 ## Unsolved Problems
+The team had a lot of blockers while making this app. The databases were one of the hardest hurdles to overcome. With the confusing one to many and many to many relationships about the many teas and the many benefits, databases were created and dropped many times. Thankfully, Lauren and Brock were able to create the perfect database for all the tea and benefit info.
+
+Another blocker the team had was connecting the front-end to the back-end. This was the first project where the team had to create two separate repos, one for front-end and one for back-end. In the past, the repos would heavily lean towards one end, but this was the first time where it is equally balanced. The team was able to overcome this blocker with the help of TA's and instructors.
 
 ## Future Enhancements
 For this project we had a few plans that we didn't quite get to. With the time alloted we just weren't able to implement those features into the final product, but we hope to include them with future updates. Here is what we had in mind.
