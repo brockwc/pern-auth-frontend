@@ -2,7 +2,7 @@ import React from 'react';
 import { Container, Row, Col } from "react-bootstrap"
 import { Link } from "react-router-dom";
 import TeaCard from "../components/TeaCard";
-// import BenefitCard from "../components/BenefitCardCard";
+import BenefitCard from "../components/BenefitCard";
 
 import useTeas from "../hooks/useTeas";
 
@@ -10,7 +10,11 @@ const AllTeas = (props) => {
   const [teas, fetchTeas] = useTeas()
   // const [teaBens, fetchTeaBens] = useTeaBens()
 
-  console.log(teas.length && teas[1].benefits)
+  // console.log(teas.length && teas[1].benefits[0].name)
+
+  // const test = () => {
+  //   teas[1].benefits.forEach(element => console.log(element));
+  // }
   
   const generatedList = () => {
     return teas.map((tea, index) => (
