@@ -1,25 +1,20 @@
-import React, { useState, useEffect } from 'react'
+import React from 'react'
 import BenefitModel from '../models/benefit'
+import {useHistory} from 'react-router-dom'
 
 const BenefitCard = (props) => {
-  const [userBenefits, setUserBenefits] = useState([])
+  let history = useHistory()
 
-  const createUserBenefit = () => {
-    BenefitModel.create().then(data => {
-      setUserBenefits(data.userBenefits)
-    })
+  const addBenefit = () => {
+    console.log(props)
+    const userId = localStorage.getItem('id')
+    BenefitModel.create(props.benefit, userId).then(data => history.push('/profile'))
   }
-
-  useEffect(() => {
-    createUserBenefit()
-}, [])
 
   return (
     <div className="BenefitCard">
         <p>{ props.benefit.name }</p>
-        <form action = "/allbenefits" method="GET">
-        <button type = "submit" onClick={`${createUserBenefit}`}>Save Benefit</button>
-      </form>
+        <button onClick={addBenefit}>Save Benefit</button>
     </div>
   );
 }
