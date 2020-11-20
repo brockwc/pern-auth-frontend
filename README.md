@@ -5,6 +5,9 @@ Also, tea is very beneficial to your health. Depending on the type of tea your s
 
 There's so much more to tea than people think and with Soul Sip'n you, as a user, are able to explore the wide variety of teas and improve your knowledge on the **brew**tiful world of tea.
 
+## Motivation
+For this project, the team wanted to go with something that users can benefit from and use on more than one occasion.
+
 ## User Stories
 - As a user, I want to feel relaxed as I use this app.
 - As a user, I want to sign up for 'soul sip'n"
@@ -49,3 +52,12 @@ This code is the snippet of code on the "TeaCard" page. It shows the solution to
 For this project we had a few plans that we didn't quite get to. With the time alloted we just weren't able to implement those features into the final product, but we hope to include them with future updates. Here is what we had in mind.
 - Allowing the logged in user to favorite 
 - Theme changes based on the type of tea the user is reading on.
+
+## Special Thanks To...
+Without these people, the app would not be where it is today!
+
+Instructors and TAs
+- Brock Whitbread-Cole
+- James Sinkler
+- Jacob Kleiman
+- Seanny Phoenix
