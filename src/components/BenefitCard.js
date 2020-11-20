@@ -1,13 +1,20 @@
 import React from 'react'
-import createUserBenefit from '../hooks/useBenefits'
+import BenefitModel from '../models/benefit'
+import {useHistory} from 'react-router-dom'
 
 const BenefitCard = (props) => {
+  let history = useHistory()
+
+  const addBenefit = () => {
+    console.log(props)
+    const userId = localStorage.getItem('id')
+    BenefitModel.create(props.benefit, userId).then(data => history.push('/profile'))
+  }
+
   return (
     <div className="BenefitCard">
         <p>{ props.benefit.name }</p>
-        <form>
-        <button onClick={() => createUserBenefit(props.benefit)}>Save Benefit</button>
-      </form>
+        <button onClick={addBenefit}>Save Benefit</button>
     </div>
   );
 }

@@ -2,13 +2,14 @@ import { useState, useEffect } from 'react'
 import BenefitModel from "../models/benefit"
 
 const useBenefits = () => {
-  const [benefits, setBenefits] = useState ([])
+  const [benefits, setBenefits] = useState([])
   const [userBenefits, setUserBenefits] = useState([])
 
   const createUserBenefit = (benefitData) => {
+    console.log('please work')
     BenefitModel.create(benefitData).then(data => {
-      console.log(userBenefits)
-      setUserBenefits(userBenefits)
+      console.log(data)
+      // setUserBenefits(data)
     })
   }
 
