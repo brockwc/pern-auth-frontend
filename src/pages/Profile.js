@@ -5,6 +5,8 @@ const Profile = props => {
     <div>
       <h1>Profile of user with ID { props.currentUser }</h1>
       
+    {/* <h1>{make a fetch request to get this users benefits.}</h1> */}
+
       <h3>What did you need?</h3>
         <p>Here is your list of saved benefits</p>
         <ul>
