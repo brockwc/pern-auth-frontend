@@ -1,23 +1,28 @@
 import React from 'react';
 import { Container, Row, Col } from "react-bootstrap"
-import { Link } from "react-router-dom";
+// import { Link } from "react-router-dom";
 import TeaCard from "../components/TeaCard";
-// import BenefitCard from "../components/BenefitCardCard";
+import AllBenefits from "../pages/AllBenefits"
+// import BenefitCard from "../components/BenefitCard";
 
 import useTeas from "../hooks/useTeas";
+import useBenefits from "../hooks/useBenefits";
 
 const AllTeas = (props) => {
   const [teas, fetchTeas] = useTeas()
+  const [benefits, fetchBenefits] = useBenefits()
   // const [teaBens, fetchTeaBens] = useTeaBens()
 
-  console.log(teas.length && teas[1].benefits)
+  // console.log(teas.length && teas[1].benefits[0].name)
+
+  // const test = () => {
+  //   teas[1].benefits.forEach(element => console.log(element.name));
+  // }
   
   const generatedList = () => {
     return teas.map((tea, index) => (
       <Col xs={4}>
-        <Link to = {`/allteas/${tea.id}`} key = {index}>
-          <TeaCard tea = {tea} />
-        </Link>
+          <TeaCard tea = {tea} benefits = {benefits} />
       </Col>
     ))
   }
