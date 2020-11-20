@@ -7,7 +7,7 @@ import useTeas from "../hooks/useTeas";
 
 const AllTeas = (props) => {
   const [teas, fetchTeas] = useTeas()
-
+  console.log(teas.length && teas[1].benefits)
   const generatedList = () => {
     return teas.map((tea, index) => (
       <Col xs={4}>

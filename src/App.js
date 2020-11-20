@@ -4,6 +4,9 @@ import Footer from './components/Footer'
 import Routes from './config/Routes'
 import './App.css'
 import UserModel from './models/user'
+// import TeaCard from './components/TeaCard'
+// import BenefitCard from './components/BenefitCard'
+// import AllTeas from './pages/AllTeas'
 
 function App() {
   const [currentUser, setCurrentUser] = useState(localStorage.getItem('id'))
@@ -35,6 +38,7 @@ function App() {
         storeUser={ storeUser }
       />
       <Footer />
+      {/* <TeaCard tea={tea} benefit={benefit} /> */}
     </div>
   );
 }
