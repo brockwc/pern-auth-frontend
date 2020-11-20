@@ -3,7 +3,7 @@ import useUserBenefits from "../hooks/useUserBenefits";
 
 const AllUserBenefits = () => {
     const [userBenefits, fetchUserBenData] = useUserBenefits([])
-
+    
     const generatedUserBenList = () => {
         return userBenefits.map((userBenefit, index) => (
             <Col xs={4}>
