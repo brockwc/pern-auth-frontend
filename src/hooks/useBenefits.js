@@ -3,7 +3,7 @@ import BenefitModel from "../models/benefit"
 
 const useBenefits = () => {
   const [benefits, setBenefits] = useState([])
-  const [userBenefits, setUserBenefits] = useState([])
+  // const [userBenefits, setUserBenefits] = useState([])
 
   const createUserBenefit = (benefitData) => {
     console.log('please work')
