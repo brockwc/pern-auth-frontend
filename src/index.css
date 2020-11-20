@@ -9,6 +9,12 @@ body {
   text-shadow: 2px 1px black;
 }
 
+button {
+  border-radius: 10px;
+  border: solid 2px dodgerblue;
+  color: dodgerblue
+}
+
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
@@ -29,17 +35,22 @@ a {
   padding: 5px;
   padding-right: 10px;
   background: rgba(209, 209, 209, 0.8);
-  border: solid 2px black;
+  border: solid 2px dodgerblue;
   border-radius: 10px;
   align-items: stretch;
+  
 }
 
-.TeaCard > h3 {
+.TeaCard  {
   text-align: left;
   padding-left: 5%;
 }
 
-.TeaCard > p {
-  text-align: left;
-  padding-left: 10%;
+.TeaCard > h3 {
+  color: dodgerblue;
+}
+
+.TeaCard > form {
+  text-align: center;
+
 }
