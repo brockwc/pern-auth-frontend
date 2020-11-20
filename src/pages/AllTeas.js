@@ -2,12 +2,16 @@ import React from 'react';
 import { Container, Row, Col } from "react-bootstrap"
 import { Link } from "react-router-dom";
 import TeaCard from "../components/TeaCard";
+// import BenefitCard from "../components/BenefitCardCard";
 
 import useTeas from "../hooks/useTeas";
 
 const AllTeas = (props) => {
   const [teas, fetchTeas] = useTeas()
+  // const [teaBens, fetchTeaBens] = useTeaBens()
+
   console.log(teas.length && teas[1].benefits)
+  
   const generatedList = () => {
     return teas.map((tea, index) => (
       <Col xs={4}>
@@ -17,6 +21,12 @@ const AllTeas = (props) => {
       </Col>
     ))
   }
+
+  // const generateBensList = () => {
+  //   return teaBens.map((teaBen, index) => (
+  //     <BenefitCard teaBen={teaBen} />
+  //   ))
+  // }
 
   return (
     <div>

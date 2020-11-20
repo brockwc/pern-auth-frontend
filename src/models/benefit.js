@@ -12,13 +12,13 @@ class BenefitModel {
     return fetch(`${REACT_APP_API_URL}/allbenefits/${benefitId}`).then(res => res.json())
   }
 
-  static create = (userBenefitData) => {
+  static create = (userBenefitData, userId) => {
     return fetch(`${REACT_APP_API_URL}/allbenefits`, {
       method: "POST",
       headers: {
         "Content-Type": "application/json"
       },
-      body: JSON.stringify(userBenefitData)
+      body: JSON.stringify({userBenefitData, userId})
     })
       .then(res => res.json())
   }
