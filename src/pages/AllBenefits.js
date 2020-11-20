@@ -1,10 +1,5 @@
 import React from 'react'
-<<<<<<< HEAD
-
-=======
 import { Container, Row, Col } from "react-bootstrap"
-import { Link } from "react-router-dom";
->>>>>>> submain
 import BenefitCard from "../components/BenefitCard"
 
 import useBenefits from "../hooks/useBenefits";
@@ -14,17 +9,9 @@ const AllBenefits = (props) => {
 
   const generatedList = () => {
     return benefits.map((benefit, index) => (
-<<<<<<< HEAD
-      <>
-        <BenefitCard benefit = {benefit} key ={benefit.id}/>
-        </>
-=======
       <Col xs = {4}>
-        <Link to = {`/allbenefits/${benefit.id}`} key = {index}>
-          <BenefitCard benefit = {benefit} />
-        </Link>
+        <BenefitCard benefit = {benefit} key ={benefit.id}/>
       </Col>
->>>>>>> submain
     ))
   }
 
