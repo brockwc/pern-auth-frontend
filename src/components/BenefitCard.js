@@ -5,8 +5,8 @@ const BenefitCard = (props) => {
   return (
     <div className="BenefitCard">
         <p>{ props.benefit.name }</p>
-        <form action = "/allbenefits" method="POST">
-        <button type = "submit" onClick={createUserBenefit}>Save Benefit</button>
+        <form>
+        <button onClick={() => createUserBenefit(props.benefit)}>Save Benefit</button>
       </form>
     </div>
   );

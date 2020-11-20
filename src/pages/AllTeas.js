@@ -2,12 +2,16 @@ import React from 'react';
 
 import { Link } from "react-router-dom";
 import TeaCard from "../components/TeaCard";
+// import BenefitCard from "../components/BenefitCardCard";
 
 import useTeas from "../hooks/useTeas";
 
 const AllTeas = (props) => {
   const [teas, fetchTeas] = useTeas()
+  // const [teaBens, fetchTeaBens] = useTeaBens()
+
   console.log(teas.length && teas[1].benefits)
+  
   const generatedList = () => {
     return teas.map((tea, index) => (
       <Link to={`/allteas/${tea.id}`} key={index}>
@@ -15,6 +19,12 @@ const AllTeas = (props) => {
       </Link>
     ))
   }
+
+  // const generateBensList = () => {
+  //   return teaBens.map((teaBen, index) => (
+  //     <BenefitCard teaBen={teaBen} />
+  //   ))
+  // }
 
   return (
     <div>

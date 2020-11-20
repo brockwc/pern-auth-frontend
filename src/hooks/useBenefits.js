@@ -5,9 +5,10 @@ const useBenefits = () => {
   const [benefits, setBenefits] = useState ([])
   const [userBenefits, setUserBenefits] = useState([])
 
-  const createUserBenefit = () => {
-    BenefitModel.create().then(data => {
-      setUserBenefits(data.userBenefits)
+  const createUserBenefit = (benefitData) => {
+    BenefitModel.create(benefitData).then(data => {
+      console.log(userBenefits)
+      setUserBenefits(userBenefits)
     })
   }
 

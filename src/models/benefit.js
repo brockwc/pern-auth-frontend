@@ -14,7 +14,7 @@ class BenefitModel {
 
   static create = (userBenefitData) => {
     return fetch(`${REACT_APP_API_URL}/allbenefits`, {
-      method: "GET",
+      method: "POST",
       headers: {
         "Content-Type": "application/json"
       },
