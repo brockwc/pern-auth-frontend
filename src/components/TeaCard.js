@@ -1,9 +1,6 @@
 import React from 'react';
-import useBenefits from "../hooks/useBenefits";
-import useTeas from "../hooks/useTeas";
 
 const TeaCard = (props) => {
-  const [teas, fetchTeas] = useTeas()
 
   return (
     <div className="TeaCard">

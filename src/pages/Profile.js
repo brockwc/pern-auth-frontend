@@ -9,8 +9,6 @@ const Profile = (props) => {
 
   const fetchUserBenData = () => {
     UserBenefitModel.all().then(data => {
-      { console.log(data.userBenefits[0].benefits) }
-      { console.log(data.userBenefits[0].firstName) }
       setUserBenefits(data.userBenefits[0].benefits)
       setUserInfo(data.userBenefits[0].firstName)
     })
@@ -23,7 +21,7 @@ const Profile = (props) => {
   const generatedUserBenList = () => {
     return userBenefits.map((userBenefit, index) => (
       <Col xs={4}>
-        <UserBenefitCard userBenefit={userBenefit.name} key={userBenefit.id} />
+        <UserBenefitCard userBenefit={userBenefit} key={userBenefit.id} />
       </Col>
     ))
   }
