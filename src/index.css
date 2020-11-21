@@ -24,8 +24,13 @@ a {
   text-decoration: none;
 }
 
+.homePage {
+  padding: 100px;
+}
+
 .col-4 {
   padding: 0;
+  margin: 5px 0 5px 0;
 }
 
 .TeaCard, .BenefitCard {
