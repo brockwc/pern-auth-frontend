@@ -12,16 +12,18 @@ class UserBenefitModel {
         return fetch(`${REACT_APP_API_URL}/profile/${userBenefitId}`).then(res => res.json())
     }
 
-    static delete = (userBenefitId, benefitId) => {
-        return fetch(`${REACT_APP_API_URL}/profile/${userBenefitId}`, {
+    static delete = (benefitId) => {
+        return fetch(`${REACT_APP_API_URL}/profile/${benefitId}`, {
             method: 'DELETE',
             headers: {
                 "Content-Type": "application/json"
             },
-            body: JSON.stringify({userBenefitId, benefitId})
+            body: JSON.stringify({benefitId})
         }).then(res => res.json())
     }
 }
+
+
 
 
 
