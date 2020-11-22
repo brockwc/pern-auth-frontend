@@ -49,7 +49,6 @@ const Profile = (props) => {
 
 
 
-
 // return (
 //   <div>
 //     {userBenefits.map((userBenefit, index) => {
