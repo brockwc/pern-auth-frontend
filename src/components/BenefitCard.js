@@ -6,7 +6,6 @@ const BenefitCard = (props) => {
   let history = useHistory()
 
   const addBenefit = () => {
-    console.log(props)
     const userId = localStorage.getItem('id')
     BenefitModel.create(props.benefit, userId).then(data => history.push('/profile'))
   }
