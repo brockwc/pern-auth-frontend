@@ -13,7 +13,8 @@ const UserBenefitCard = (props) => {
     
     return (
         <div className="UserBenefitCard">
-        <p>{ props.userBenefit.name }</p>
+        <h3>{ props.userBenefit.name }</h3>
+        <button onClick={''}>See Teas</button> <br />
         <button onClick={delUserBen}>Remove Benefit</button>
     </div>
     )

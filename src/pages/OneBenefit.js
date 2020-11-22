@@ -6,7 +6,7 @@ import BenefitCard from "../components/BenefitCard";
 const OneBenefit = (props) => {
   const [benefit, setBenefit] = useState()
   const [currentBenefit, setCurrentBenefit] = useState(props.match.params.id)
-
+  console.log(currentBenefit)
 
   useEffect(() => {
     fetchData()
@@ -14,7 +14,7 @@ const OneBenefit = (props) => {
 
   const fetchData = () => {
     BenefitModel.show(currentBenefit).then(data => {
-      setBenefit( data.benefit )
+      setBenefit( benefit )
     })
   }
 
@@ -22,7 +22,7 @@ const OneBenefit = (props) => {
     <div>
       <h1>Here is the one benefit you chose</h1>
       <hr />
-      <BenefitCard {...benefit} />
+      
     </div>
   )
 }

@@ -14,10 +14,6 @@ const TeaCard = (props) => {
         <p>{ props.tea.type }</p>
       <h3><u>Description:</u></h3>
         <p>{ props.tea.description }</p>
-
-      <form action = "/allteas/:id">
-        <button type = "submit">Save Tea</button>
-      </form>
     </div>
   );
 }
