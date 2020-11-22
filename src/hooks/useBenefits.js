@@ -7,7 +7,6 @@ const useBenefits = () => {
 
   const createUserBenefit = (benefitData) => {
     BenefitModel.create(benefitData).then(data => {
-      console.log(data)
       // setUserBenefits(data)
     })
   }

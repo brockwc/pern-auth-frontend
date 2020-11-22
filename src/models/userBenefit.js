@@ -11,7 +11,21 @@ class UserBenefitModel {
     static show = (userBenefitId) => {
         return fetch(`${REACT_APP_API_URL}/profile/${userBenefitId}`).then(res => res.json())
     }
+
+    static delete = (benefitId) => {
+        return fetch(`${REACT_APP_API_URL}/profile/${benefitId}`, {
+            method: 'DELETE',
+            headers: {
+                "Content-Type": "application/json"
+            },
+            body: JSON.stringify({benefitId})
+        }).then(res => res.json())
+    }
 }
+
+
+
+
 
 
 export default UserBenefitModel;

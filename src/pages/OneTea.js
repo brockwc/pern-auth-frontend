@@ -13,7 +13,6 @@ const OneTea = (props) => {
   }, [])
 
   const fetchData = () => {
-    console.log("This is in fetchData")
     TeaModel.show(currentTea).then(data => {
       setTea( data.tea )
     })
