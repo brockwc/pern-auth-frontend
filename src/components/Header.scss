@@ -28,3 +28,13 @@ header {
     }
   }
 }
+
+@media screen and (max-width: 530px) {
+  header {
+    a {
+      display: block;
+      margin: 0;
+      padding: 0;
+    }
+  }
+}
