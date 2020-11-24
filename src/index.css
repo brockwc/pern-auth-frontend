@@ -9,16 +9,17 @@ body {
 }
 
 h1 {
+  color:dodgerblue;
+}
+
+/* .fadeIn {
   margin: 0;
   position: absolute;
   color: dodgerblue;
   top: 40%;
   left: 25%;
-}
-
-.fadeIn {
   animation: ease-in 2s;
-}
+} */
 
 button {
   border-radius: 10px;
