@@ -13,7 +13,7 @@ const AllTeas = (props) => {
   
   const generatedList = () => {
     return teas.map((tea, index) => (
-      <Col xs={4}>
+      <Col xs={12} sm={6} md={4} lg={3}>
           <TeaCard tea = {tea} benefits = {benefits} />
       </Col>
     ))

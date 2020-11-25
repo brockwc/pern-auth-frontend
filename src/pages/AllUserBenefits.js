@@ -6,7 +6,7 @@ const AllUserBenefits = () => {
     
     const generatedUserBenList = () => {
         return userBenefits.map((userBenefit, index) => (
-            <Col xs={4}>
+            <Col xs={12} sm={6} md={4} lg={3}>
                 <UserBenefitCard userBenefit={userBenefit} key={userBenefit.id} />
             </Col>
         ))
@@ -18,7 +18,7 @@ const AllUserBenefits = () => {
                 <Container fluid>
                     <Row>
                         {
-                            generatedUserBenList()
+                          generatedUserBenList()
                         }
                     </Row>
                 </Container>

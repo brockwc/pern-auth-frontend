@@ -1,28 +1,27 @@
 import React, { useState, useEffect } from 'react'
 
 import BenefitModel from "../models/benefit";
-import BenefitCard from "../components/BenefitCard";
+import OneBenefitCard from "../components/BenefitCard";
 
 const OneBenefit = (props) => {
   const [benefit, setBenefit] = useState()
   const [currentBenefit, setCurrentBenefit] = useState(props.match.params.id)
-  console.log(currentBenefit)
-
   useEffect(() => {
-    fetchData()
+    fetchBenData()
   }, [])
 
-  const fetchData = () => {
+  const fetchBenData = () => {
     BenefitModel.show(currentBenefit).then(data => {
-      setBenefit( benefit )
+      setBenefit( data.benefit )
     })
   }
+
+  console.log(benefit)
 
   return (
     <div>
       <h1>Here is the one benefit you chose</h1>
-      <hr />
-      
+        <OneBenefitCard benefit={benefit} />
     </div>
   )
 }

@@ -3,4 +3,12 @@ footer {
   position: absolute;
   top: 85px;
   right: 35px;
+  text-shadow: 2px 1px black;
+}
+
+@media screen and (max-width: 900px) {
+  footer {
+    position: absolute;
+    top: 20px;
+  }
 }

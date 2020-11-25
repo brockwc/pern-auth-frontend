@@ -6,6 +6,7 @@ header {
   margin: 10px;
   display: flex;
   justify-content: space-between;
+  text-shadow: 2px 1px black;
 
   a {
     color: #fff;
@@ -24,6 +25,16 @@ header {
     li {
       list-style-type: none;
       padding: 0px 10px;
+    }
+  }
+}
+
+@media screen and (max-width: 530px) {
+  header {
+    a {
+      display: block;
+      margin: 0;
+      padding: 0;
     }
   }
 }

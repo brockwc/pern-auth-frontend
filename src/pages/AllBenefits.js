@@ -9,7 +9,7 @@ const AllBenefits = (props) => {
 
   const generatedList = () => {
     return benefits.map((benefit, index) => (
-      <Col xs = {4}>
+      <Col xs={12} sm={6} md={4} lg={3}>
         <BenefitCard benefit = {benefit} key ={benefit.id}/>
       </Col>
     ))
