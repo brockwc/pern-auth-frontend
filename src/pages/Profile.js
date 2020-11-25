@@ -2,15 +2,19 @@ import React, { useState, useEffect } from 'react'
 import UserBenefitCard from '../components/UserBenefitCard';
 import UserBenefitModel from "../models/userBenefit";
 import { Container, Row, Col } from "react-bootstrap"
+import { Link } from "react-router-dom"
 
 const Profile = (props) => {
   const [userBenefits, setUserBenefits] = useState([])
   const [userInfo, setUserInfo] = useState(null)
+  const [userId, setUserId] = useState(null)
+
 
   const fetchUserBenData = () => {
     UserBenefitModel.all().then(data => {
       setUserBenefits(data.userBenefits[0].benefits)
       setUserInfo(data.userBenefits[0].firstName)
+      setUserId(data.userBenefits[0].id)
     })
   }
 
@@ -29,6 +33,7 @@ const Profile = (props) => {
   return (
     <div>
       <h1>Hello {userInfo}</h1>
+      <Link to={`/user/${userId}`}>Edit Your Info</Link>
       <h1>Here are benefits!</h1>
       { userBenefits.length ?
         <Container fluid>

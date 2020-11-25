@@ -9,6 +9,8 @@ import AllTeas from "../pages/AllTeas"
 import OneTea from "../pages/OneTea"
 import AllBenefits from "../pages/AllBenefits"
 import OneBenefit from "../pages/OneBenefit"
+import EditUser from "../pages/User"
+
 
 const PrivateRoute = ({ component: Component, ...rest }) => {
   const currentUser = localStorage.getItem('id')
@@ -26,6 +28,7 @@ const Routes = (props) => (
     <Route exact path = "/allbenefits" component = { AllBenefits } />
     <Route path = "/allbenefits/:id" component = { OneBenefit } />
     <Route path = '/register' component = { Register } />
+    <Route path = '/update/:id' component = { EditUser } />
     <Route path = '/login' render = { (routeComponentProps) => {
       return  <Login 
                 {...routeComponentProps}
