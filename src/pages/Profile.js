@@ -29,7 +29,7 @@ const Profile = (props) => {
   return (
     <div>
       <h1>Hello {userInfo}</h1>
-      <h1>Here are benefits!</h1>
+      <h1>Here are your saved benefits!</h1>
       { userBenefits.length ?
         <Container fluid>
           <Row>
@@ -38,7 +38,7 @@ const Profile = (props) => {
             }
           </Row>
         </Container>
-        : "Loading..."}
+        : "No benefits saved"}
     </div>
   )
 }

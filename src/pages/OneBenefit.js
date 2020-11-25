@@ -8,10 +8,10 @@ const OneBenefit = (props) => {
   const [allBenTeas, SetAllBenTeas] = useState([])
 
   useEffect(() => {
-    fetchData()
+    fetchBenData()
   }, [])
 
-  const fetchData = () => {
+  const fetchBenData = () => {
     BenefitModel.show(currentBenefit).then(data => {
       setCurrentBenefit( data.benefit[0].name )
       SetAllBenTeas( data.benefit[0].teas)
