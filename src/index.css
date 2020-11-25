@@ -9,8 +9,17 @@ body {
 }
 
 h1 {
-  color: dodgerblue;
+  color:dodgerblue;
 }
+
+/* .fadeIn {
+  margin: 0;
+  position: absolute;
+  color: dodgerblue;
+  top: 40%;
+  left: 25%;
+  animation: ease-in 2s;
+} */
 
 button {
   border-radius: 10px;
@@ -32,12 +41,12 @@ a {
   flex-direction: column;
 }
 
-.col-4 {
+.col-xs-12, .col-sm-6, .col-md-4, .col-lg-3 {
   padding: 0;
-  margin: 5px 0 5px 0;
+  margin: 0;
 }
 
-.TeaCard, .BenefitCard {
+.TeaCard, .BenefitCard, .UserBenefitCard {
   width: 95%;
   font-size: 1em;
   margin: 5px;
@@ -47,7 +56,10 @@ a {
   border: solid 2px dodgerblue;
   border-radius: 10px;
   align-items: stretch;
-  
+}
+
+.BenefitCard, .UserBenefitCard {
+  font-size: 1.25em;
 }
 
 .TeaCard  {
@@ -59,8 +71,23 @@ a {
   color: dodgerblue;
 }
 
-@media only screen and (max-width: 750px) {
+@media only screen and (max-width: 1050px) {
+  body {
+    font-size: 1em;
+  }
+
+  .TeaCard, .BenefitCard, .UserBenefitCard {
+    padding: 1px;
+    align-items: stretch;
+  }
+}
+
+@media only screen and (max0width: 530px) {
   body {
     font-size: .75em;
+  }
+
+  .h3 {
+    font-size: 1.25em;
   }
 }
