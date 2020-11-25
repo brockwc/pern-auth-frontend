@@ -1,6 +1,7 @@
 import React from 'react'
+
 import BenefitModel from '../models/benefit'
-import {useHistory} from 'react-router-dom'
+import {useHistory, Link} from 'react-router-dom'
 
 const BenefitCard = (props) => {
   let history = useHistory()
@@ -13,6 +14,7 @@ const BenefitCard = (props) => {
   return (
     <div className="BenefitCard">
         <p>{ props.benefit.name }</p>
+        <Link to={`/allbenefits/${props.benefit.id}`}>See Teas</Link> <br />
         <button onClick={addBenefit}>Save Benefit</button>
     </div>
   );
