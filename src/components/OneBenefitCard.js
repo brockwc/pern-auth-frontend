@@ -13,4 +13,4 @@ const OneBenefitCard = (props) => {
   );
 }
 
-export default OneBenefitCard; 
+export default OneBenefitCard;
