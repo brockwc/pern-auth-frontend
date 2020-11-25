@@ -38,7 +38,7 @@ const Profile = (props) => {
             }
           </Row>
         </Container>
-        : "Loading..."}
+        : "No benefits saved"}
     </div>
   )
 }
