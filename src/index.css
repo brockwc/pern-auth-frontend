@@ -5,11 +5,17 @@ body {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   font-family: 'Ubuntu', sans-serif;
-  text-shadow: 2px 1px white;
+  text-shadow: 2px 1px rgb(222, 222, 222);
 }
 
 h1 {
   color:dodgerblue;
+  margin-bottom: 50px;
+}
+
+h2 {
+  color: lightskyblue;
+  margin-bottom: 25px;
 }
 
 /* .fadeIn {
@@ -71,6 +77,30 @@ a {
   color: dodgerblue;
 }
 
+.RegDiv, .LogDiv {
+  color: dodgerblue;
+  width: 70%;
+  margin: 0 auto;
+}
+
+.RegDiv form, .LogDiv form {
+  display: table;
+  margin-left: auto;
+  margin-right: auto;
+  background: rgba(209, 209, 209, 0.8);
+  padding: 15px;
+  border: solid 2px dodgerblue;
+  border-radius: 10px;
+}
+
+.RegDiv label, .LogDiv label {
+  margin-right: 5px;
+  display: table-cell;
+}
+
+
+
+/* Media Responsiveness */
 @media only screen and (max-width: 1050px) {
   body {
     font-size: 1em;

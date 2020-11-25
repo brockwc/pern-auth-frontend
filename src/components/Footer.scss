@@ -6,6 +6,10 @@ footer {
   text-shadow: 2px 1px black;
 }
 
+p {
+  margin-bottom: 0;
+}
+
 @media screen and (max-width: 900px) {
   footer {
     position: absolute;
