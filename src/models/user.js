@@ -33,10 +33,6 @@ class UserModel {
     })
   }
 
-  static show = (userId) => {
-    return fetch(`${REACT_APP_API_URL}/user/${userId}`).then(res => res.json())
-  }
-
 }
 
 

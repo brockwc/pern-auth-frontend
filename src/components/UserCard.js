@@ -2,11 +2,13 @@ import React from 'react';
 
 const UserCard = (props) => {
 
+    console.log(props.user)
 
-console.log(props)
 
 return(
-    <h1>hi</h1>
+    <>
+    <h1>user info and update info</h1>
+    </>
 )
 }
 
