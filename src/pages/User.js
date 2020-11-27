@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react'
-import UserModel from '../models/user'
+import UserEditModel from '../models/userEdit'
 import UserCard from '../components/UserCard'
 
 function User() {
@@ -11,11 +11,10 @@ function User() {
 
 
     const findUser = () => {
-        UserModel.show(foundUser).then(data => {
-            setFoundUser(data.foundUser)
+        UserEditModel.show(foundUser).then(data => {
+            setFoundUser(data)
         })
     }
-    console.log(foundUser)
 
     return (
         <div>

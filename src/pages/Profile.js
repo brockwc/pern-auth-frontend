@@ -2,7 +2,12 @@ import React, { useState, useEffect } from 'react'
 import UserBenefitCard from '../components/UserBenefitCard';
 import UserBenefitModel from "../models/userBenefit";
 import { Container, Row, Col } from "react-bootstrap"
+<<<<<<< HEAD
 import { Link } from "react-router-dom"
+=======
+import {Link} from 'react-router-dom'
+const userId = localStorage.getItem('id')
+>>>>>>> submain
 
 const Profile = (props) => {
   const [userBenefits, setUserBenefits] = useState([])
@@ -29,12 +34,12 @@ const Profile = (props) => {
       </Col>
     ))
   }
-
+console.log(userId)
   return (
     <div>
       <h1>Hello {userInfo}</h1>
       <Link to={`/user/${userId}`}>Edit Your Info</Link>
-      <h1>Here are benefits!</h1>
+      <h1>Here are your saved benefits!</h1>
       { userBenefits.length ?
         <Container fluid>
           <Row>
