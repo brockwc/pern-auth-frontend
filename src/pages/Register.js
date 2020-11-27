@@ -40,10 +40,10 @@ const Register = props => {
   return (
     
     <div className="RegDiv">
-      <h4>Register</h4>
+      <h2>Register</h2>
       <form onSubmit={ handleSubmit }>
         <div className="form-group">
-          <label htmlFor="name">First Name</label>
+          <label htmlFor="name">First Name:</label>
           <input 
             onChange={ handleFirstName } 
             value={ firstName }
@@ -54,7 +54,7 @@ const Register = props => {
           />
         </div>
         <div className="form-group">
-          <label htmlFor="name">Last Name</label>
+          <label htmlFor="name">Last Name:</label>
           <input 
             onChange={ handleLastName } 
             value={ lastName }
@@ -65,7 +65,7 @@ const Register = props => {
           />
         </div>
         <div className="form-group">
-          <label htmlFor="name">Email</label>
+          <label htmlFor="name">Email:</label>
           <input 
             onChange={ handleEmail } 
             value={ email } 
@@ -76,7 +76,7 @@ const Register = props => {
           />
         </div>
         <div className="form-group">
-          <label htmlFor="name">Password</label>
+          <label htmlFor="name">Password:</label>
           <input 
             onChange={ handlePassword } 
             value={ password } 
@@ -87,7 +87,7 @@ const Register = props => {
           />
         </div>
         <div className="form-group">
-          <label htmlFor="confirm-password">Confirm Password</label>
+          <label htmlFor="confirm-password">Confirm Password:</label>
           <input 
             onChange={ handleConfirmPassword } 
             value={ confirmPassword } 

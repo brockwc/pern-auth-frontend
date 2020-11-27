@@ -10,9 +10,6 @@ const UserBenefitCard = (props) => {
     const delUserBen = () => {
         UserBenefitModel.delete(props.userBenefit.id).then(window.location.reload())
     }
-
-    console.log(props)
-
     
     return (
         <div className="UserBenefitCard">

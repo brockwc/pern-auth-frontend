@@ -17,7 +17,7 @@ const AllBenefits = (props) => {
 
   return (
     <div>
-      <h1>Here are benefits!</h1>
+      <h1>Here are our benefits!</h1>
       { benefits.length ?
         <Container fluid>
           <Row>
