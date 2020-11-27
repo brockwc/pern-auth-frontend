@@ -3,7 +3,7 @@ import useUserBenefits from "../hooks/useUserBenefits";
 
 const AllUserBenefits = () => {
     const [userBenefits, fetchUserBenData] = useUserBenefits([])
-    
+
     const generatedUserBenList = () => {
         return userBenefits.map((userBenefit, index) => (
             <Col xs={12} sm={6} md={4} lg={3}>
@@ -18,7 +18,7 @@ const AllUserBenefits = () => {
                 <Container fluid>
                     <Row>
                         {
-                          generatedUserBenList()
+                            generatedUserBenList()
                         }
                     </Row>
                 </Container>
