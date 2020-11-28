@@ -13,6 +13,17 @@ class UserEditModel {
     static show = () => {
         return fetch(`${REACT_APP_API_URL}/user/${userId}`).then(res => res.json())
     }
+
+    static update = (data) => {
+        return fetch(`${REACT_APP_API_URL}/user/${userId}`, {
+            method: 'POST',
+            headers: {
+                "Content-Type": "application/json"
+            },
+            credentials: 'include',
+            body: JSON.stringify({data})
+        }).then(res => res.json())
+    }
 }
 
 

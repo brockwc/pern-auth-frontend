@@ -12,10 +12,10 @@ function User() {
 
     const findUser = () => {
         UserEditModel.show(foundUser).then(data => {
-            setFoundUser(data)
+            setFoundUser(data.user)
         })
     }
-
+    
     return (
         <div>
             <UserCard user={foundUser} />

@@ -30,7 +30,11 @@ const Profile = (props) => {
       </Col>
     ))
   }
+<<<<<<< HEAD
 
+=======
+  
+>>>>>>> submain
   return (
     <div>
       <h1>Hello {userInfo}</h1>

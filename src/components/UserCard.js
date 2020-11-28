@@ -1,8 +1,13 @@
+<<<<<<< HEAD
 import React, { useState } from 'react'
 // import UserModel from '../models/user'
+=======
+import React, { useEffect, useState } from 'react';
+import UserEditModel from '../models/userEdit'
+>>>>>>> submain
 
-const UserCard = (props) => {
 
+<<<<<<< HEAD
     const [newFirstName, setNewFirstName] = useState('')
     const [newLastName, setNewLastName] = useState('')
     const [newEmail, setNewEmail] = useState('')
@@ -25,6 +30,38 @@ const UserCard = (props) => {
 
     return (
 
+=======
+const UserCard = ({user}) => {
+    const [newFirstName, setNewFirstName] = useState('');
+    const [newLastName, setNewLastName] = useState('');
+    const [newEmail, setNewEmail] = useState('');
+
+    useEffect(() => {
+        if(user){
+            setNewFirstName(user.firstName);
+            setNewLastName(user.lastName);
+            setNewEmail(user.email);
+        }
+    }, [user])
+
+    const handleNewFirstName = e => {
+        setNewFirstName(e.target.value)
+    }
+    const handleNewLastName = e => {
+        setNewLastName(e.target.value)
+    }
+    const handleNewEmail = e => {
+        setNewEmail(e.target.value)
+    }
+    const handleNewSubmit = e => {
+        e.preventDefault()
+            UserEditModel.update()
+                .then(data => {
+                    console.log('Successful update', data)
+                })
+        }
+    return (
+>>>>>>> submain
         <div className="RegDiv">
             <h2>Update User Info</h2>
             <form onSubmit={handleNewSubmit}>
@@ -64,12 +101,16 @@ const UserCard = (props) => {
                         required
                     />
                 </div>
+<<<<<<< HEAD
                
+=======
+>>>>>>> submain
                 <button type="submit">Update</button>
             </form>
         </div>
     )
 }
+<<<<<<< HEAD
 
 export default UserCard
 
@@ -83,3 +124,6 @@ export default UserCard
 //                     <button type="submit" class="btn btn-primary done">Done</button>
 //     </form>
 // </div>
+=======
+export default UserCard;
+>>>>>>> submain
