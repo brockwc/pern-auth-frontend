@@ -15,7 +15,6 @@ function User() {
             setFoundUser(data.user)
         })
     }
-    console.log(foundUser)
     
     return (
         <div>

@@ -1,4 +1,5 @@
 import React, { useEffect, useState } from 'react';
+import UserEditModel from '../models/userEdit'
 
 
 const UserCard = ({user}) => {
@@ -14,8 +15,6 @@ const UserCard = ({user}) => {
         }
     }, [user])
 
-    console.log(user)
-
     const handleNewFirstName = e => {
         setNewFirstName(e.target.value)
     }
@@ -27,15 +26,11 @@ const UserCard = ({user}) => {
     }
     const handleNewSubmit = e => {
         e.preventDefault()
-        // if (password === confirmPassword) {
-        //     UserModel.create({ firstName, lastName, email, password })
-        //         .then(data => {
-        //             console.log('Successful register', data)
-        //             // redirect to /login
-        //             props.history.push('/profile')
-        //         })
-        // }
-    }
+            UserEditModel.update()
+                .then(data => {
+                    console.log('Successful update', data)
+                })
+        }
     return (
         <div className="RegDiv">
             <h2>Update User Info</h2>
