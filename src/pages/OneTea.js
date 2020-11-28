@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from 'react'
 
-import TeaModel from "../models/tea";
-import TeaCard from "../components/TeaCard";
+import TeaModel from "../models/tea"
+import TeaCard from "../components/TeaCard"
 
 const OneTea = (props) => {
   const [tea, setTea] = useState()

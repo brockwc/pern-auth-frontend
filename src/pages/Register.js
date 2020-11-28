@@ -2,11 +2,11 @@ import React, { useState } from 'react'
 import UserModel from '../models/user'
 
 const Register = props => {
-  const [firstName, setFirstName] = useState('');
-  const [lastName, setLastName] = useState('');
-  const [email, setEmail] = useState('');
-  const [password, setPassword] = useState('');
-  const [confirmPassword, setConfirmPassword] = useState('');
+  const [firstName, setFirstName] = useState('')
+  const [lastName, setLastName] = useState('')
+  const [email, setEmail] = useState('')
+  const [password, setPassword] = useState('')
+  const [confirmPassword, setConfirmPassword] = useState('')
 
   const handleFirstName = e => {
     setFirstName(e.target.value)
@@ -103,4 +103,4 @@ const Register = props => {
   )
 }
 
-export default Register;
+export default Register

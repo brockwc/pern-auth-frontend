@@ -6,9 +6,9 @@ const UserCard = (props) => {
     // console.log(props)
 
 
-    const [newFirstName, setNewFirstName] = useState('');
-    const [newLastName, setNewLastName] = useState('');
-    const [newEmail, setNewEmail] = useState('');
+    const [newFirstName, setNewFirstName] = useState('')
+    const [newLastName, setNewLastName] = useState('')
+    const [newEmail, setNewEmail] = useState('')
 
     const handleNewFirstName = e => {
         setNewFirstName(e.target.value)
@@ -81,7 +81,7 @@ const UserCard = (props) => {
     )
 }
 
-export default UserCard;
+export default UserCard
 
 
 

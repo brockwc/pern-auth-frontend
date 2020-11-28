@@ -1,10 +1,10 @@
 import React from 'react';
 import { Container, Row, Col } from "react-bootstrap"
-import TeaCard from "../components/TeaCard";
+import TeaCard from "../components/TeaCard"
 
 
 import useTeas from "../hooks/useTeas";
-import useBenefits from "../hooks/useBenefits";
+import useBenefits from "../hooks/useBenefits"
 
 const AllTeas = (props) => {
   const [teas] = useTeas('')

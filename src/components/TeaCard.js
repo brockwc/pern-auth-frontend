@@ -1,4 +1,4 @@
-import React from 'react';
+import React from 'react'
 
 const TeaCard = (props) => {
 
@@ -15,7 +15,7 @@ const TeaCard = (props) => {
       <h3><u>Description:</u></h3>
         <p>{ props.tea.description }</p>
     </div>
-  );
+  )
 }
 
-export default TeaCard;
+export default TeaCard

@@ -18,4 +18,4 @@ const useTeas = () => {
   return [teas, fetchTeas]
 }
 
-export default useTeas;
+export default useTeas
