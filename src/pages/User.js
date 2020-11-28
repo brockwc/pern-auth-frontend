@@ -7,7 +7,7 @@ function User() {
 
     useEffect(() => {
         findUser()
-    }, [])
+    })
 
 
     const findUser = () => {

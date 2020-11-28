@@ -5,12 +5,12 @@ import BenefitCard from "../components/BenefitCard"
 import useBenefits from "../hooks/useBenefits";
 
 const AllBenefits = (props) => {
-  const [benefits, fetchBenefits] = useBenefits([])
+  const [benefits] = useBenefits([])
 
   const generatedList = () => {
     return benefits.map((benefit, index) => (
-      <Col xs={12} sm={6} md={4} lg={3}>
-        <BenefitCard benefit = {benefit} key ={benefit.id}/>
+      <Col xs={12} sm={6} md={4} lg={3} key={benefit.id}>
+        <BenefitCard benefit = {benefit} key={benefit.id}/>
       </Col>
     ))
   }

@@ -1,0 +1,19 @@
+footer {
+  color: lightskyblue;
+  position: absolute;
+  top: 85px;
+  right: 35px;
+  text-shadow: 2px 1px black;
+}
+
+p {
+  margin-bottom: 0;
+}
+
+@media screen and (max-width: 900px) {
+  footer {
+    position: absolute;
+    top: 20px;
+  }
+}
+/*# sourceMappingURL=Footer.css.map */

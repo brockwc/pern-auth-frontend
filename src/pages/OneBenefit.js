@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from 'react'
 import { Container, Row, Col } from "react-bootstrap"
-import BenefitModel from "../models/benefit";
-import OneBenefitCard from "../components/OneBenefitCard";
+import BenefitModel from "../models/benefit"
+import OneBenefitCard from "../components/OneBenefitCard"
 
 const OneBenefit = (props) => {
   const [currentBenefit, setCurrentBenefit] = useState(props.match.params.id)
@@ -9,7 +9,7 @@ const OneBenefit = (props) => {
 
   useEffect(() => {
     fetchBenData()
-  }, [])
+  })
 
   const fetchBenData = () => {
     BenefitModel.show(currentBenefit).then(data => {
@@ -20,7 +20,7 @@ const OneBenefit = (props) => {
 
   const genBenTeas = () => {
     return allBenTeas.map((allBenTeas, index) => (
-      <Col xs={4}>
+      <Col xs={4} key={allBenTeas.id}>
         <OneBenefitCard allBenTeas={allBenTeas} key={allBenTeas.id} />
       </Col>
     ))
