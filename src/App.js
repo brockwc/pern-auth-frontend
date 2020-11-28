@@ -38,7 +38,6 @@ function App() {
         storeUser={ storeUser }
       />
       <Footer />
-      {/* <TeaCard tea={tea} benefit={benefit} /> */}
     </div>
   );
 }

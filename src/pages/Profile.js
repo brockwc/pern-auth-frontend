@@ -2,12 +2,8 @@ import React, { useState, useEffect } from 'react'
 import UserBenefitCard from '../components/UserBenefitCard';
 import UserBenefitModel from "../models/userBenefit";
 import { Container, Row, Col } from "react-bootstrap"
-<<<<<<< HEAD
-import { Link } from "react-router-dom"
-=======
 import {Link} from 'react-router-dom'
-const userId = localStorage.getItem('id')
->>>>>>> submain
+// const userId = localStorage.getItem('id')
 
 const Profile = (props) => {
   const [userBenefits, setUserBenefits] = useState([])
@@ -29,7 +25,7 @@ const Profile = (props) => {
 
   const generatedUserBenList = () => {
     return userBenefits.map((userBenefit, index) => (
-      <Col xs={4}>
+      <Col xs={4} key={userBenefit.id} >
         <UserBenefitCard userBenefit={userBenefit} key={userBenefit.id} />
       </Col>
     ))

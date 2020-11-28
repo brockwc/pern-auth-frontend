@@ -1,10 +1,14 @@
 import React, { useState } from 'react'
-import UserModel from '../models/user'
+// import UserModel from '../models/user'
 
-const UserCard = props => {
-    const [newfirstName, setNewFirstName] = useState('');
-    const [newlastName, setNewLastName] = useState('');
-    const [newemail, setNewEmail] = useState('');
+const UserCard = (props) => {
+    // const user = 
+    // console.log(props)
+
+
+    const [newFirstName, setNewFirstName] = useState('');
+    const [newLastName, setNewLastName] = useState('');
+    const [newEmail, setNewEmail] = useState('');
 
     const handleNewFirstName = e => {
         setNewFirstName(e.target.value)
@@ -19,11 +23,6 @@ const UserCard = props => {
     const handleNewSubmit = e => {
         e.preventDefault()
 
-
-
-
-
-
         // if (password === confirmPassword) {
         //     UserModel.create({ firstName, lastName, email, password })
         //         .then(data => {
@@ -37,7 +36,7 @@ const UserCard = props => {
     return (
 
         <div className="RegDiv">
-            <h2>Register</h2>
+            <h2>Update User Info</h2>
             <form onSubmit={handleNewSubmit}>
                 <div className="form-group">
                     <label htmlFor="name">First Name:</label>
@@ -47,6 +46,7 @@ const UserCard = props => {
                         type="text"
                         id="name"
                         name="name"
+                        //placeholder
                         required
                     />
                 </div>
@@ -58,6 +58,7 @@ const UserCard = props => {
                         type="text"
                         id="name"
                         name="name"
+                        //placeholder
                         required
                     />
                 </div>
@@ -69,6 +70,7 @@ const UserCard = props => {
                         type="email"
                         id="email"
                         name="email"
+                        //placeholder
                         required
                     />
                 </div>
@@ -83,11 +85,11 @@ export default UserCard;
 
 
 
-<div class="update">
-    <form action="/update?_method=PUT" method="POST">
-        <input class="form-control" name="firstName" type="text" placeholder="Name" value={props.user.firstName}>
-            <input class="form-control" name="lastName" type="text" placeholder="Name" value={props.user.lastName}>
-                <input class="form-control" name="email" type="text" placeholder="Email" value={user.email}>
-                    <button type="submit" class="btn btn-primary done">Done</button>
-    </form>
-</div>
+// <div class="update">
+//     <form action="/update?_method=PUT" method="POST">
+//         <input class="form-control" name="firstName" type="text" placeholder="Name" value={props.user.firstName}>
+//             <input class="form-control" name="lastName" type="text" placeholder="Name" value={props.user.lastName}>
+//                 <input class="form-control" name="email" type="text" placeholder="Email" value={user.email}>
+//                     <button type="submit" class="btn btn-primary done">Done</button>
+//     </form>
+// </div>

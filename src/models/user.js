@@ -1,5 +1,5 @@
 const REACT_APP_API_URL = "http://localhost:4000/api/v1"
-const userId = localStorage.getItem('id')
+// const userId = localStorage.getItem('id')
 
 class UserModel {
 

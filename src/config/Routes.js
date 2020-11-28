@@ -28,7 +28,6 @@ const Routes = (props) => (
     <Route path = "/allbenefits/:id" component = { OneBenefit } />
     <Route path = "/user/:id" component = { User } />
     <Route path = '/register' component = { Register } />
-    <Route path = '/update/:id' component = { EditUser } />
     <Route path = '/login' render = { (routeComponentProps) => {
       return  <Login 
                 {...routeComponentProps}
