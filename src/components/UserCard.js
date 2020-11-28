@@ -2,9 +2,6 @@ import React, { useState } from 'react'
 // import UserModel from '../models/user'
 
 const UserCard = (props) => {
-    // const user = 
-    // console.log(props)
-
 
     const [newFirstName, setNewFirstName] = useState('')
     const [newLastName, setNewLastName] = useState('')
@@ -23,14 +20,7 @@ const UserCard = (props) => {
     const handleNewSubmit = e => {
         e.preventDefault()
 
-        // if (password === confirmPassword) {
-        //     UserModel.create({ firstName, lastName, email, password })
-        //         .then(data => {
-        //             console.log('Successful register', data)
-        //             // redirect to /login
-        //             props.history.push('/profile')
-        //         })
-        // }
+
     }
 
     return (

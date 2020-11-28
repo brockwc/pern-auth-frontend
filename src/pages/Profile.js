@@ -30,7 +30,7 @@ const Profile = (props) => {
       </Col>
     ))
   }
-console.log(userId)
+
   return (
     <div>
       <h1>Hello {userInfo}</h1>
