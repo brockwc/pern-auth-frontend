@@ -30,11 +30,7 @@ const Profile = (props) => {
       </Col>
     ))
   }
-<<<<<<< HEAD
-
-=======
   
->>>>>>> submain
   return (
     <div>
       <h1>Hello {userInfo}</h1>
@@ -53,20 +49,5 @@ const Profile = (props) => {
   )
 }
 
-
-
-
-
-
-
-// return (
-//   <div>
-//     {userBenefits.map((userBenefit, index) => {
-//       return <p>{userBenefit.name}</p>
-//     })}
-//   </div>
-
-// )
-// }
 
 export default Profile
