@@ -10,7 +10,7 @@ const OneTea = (props) => {
 
   useEffect(() => {
     fetchData()
-  }, [])
+  })
 
   const fetchData = () => {
     TeaModel.show(currentTea).then(data => {

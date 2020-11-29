@@ -2,6 +2,7 @@ import React, { useEffect, useState } from 'react';
 import UserEditModel from '../models/userEdit'
 import {useHistory} from 'react-router-dom'
 
+
 const UserCard = ({user}) => {
     const [newFirstName, setNewFirstName] = useState('');
     const [newLastName, setNewLastName] = useState('');
@@ -39,6 +40,7 @@ const UserCard = ({user}) => {
                 })
         }
     return (
+
         <div className="RegDiv">
             <h2>Update User Info</h2>
             <form onSubmit={handleNewSubmit}>
@@ -78,9 +80,12 @@ const UserCard = ({user}) => {
                         required
                     />
                 </div>
+
                 <button type="submit">Update</button>
             </form>
         </div>
     )
 }
+
 export default UserCard;
+
