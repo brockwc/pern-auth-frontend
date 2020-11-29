@@ -9,7 +9,7 @@ const OneBenefit = (props) => {
 
   useEffect(() => {
     fetchBenData()
-  })
+  }, [])
 
   const fetchBenData = () => {
     BenefitModel.show(currentBenefit).then(data => {
