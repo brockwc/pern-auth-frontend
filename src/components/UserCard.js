@@ -1,11 +1,14 @@
 import React, { useEffect, useState } from 'react';
 import UserEditModel from '../models/userEdit'
+import {useHistory} from 'react-router-dom' 
 
 
 const UserCard = ({user}) => {
     const [newFirstName, setNewFirstName] = useState('');
     const [newLastName, setNewLastName] = useState('');
     const [newEmail, setNewEmail] = useState('');
+
+    const history = useHistory()
 
     useEffect(() => {
         if(user){
@@ -26,9 +29,14 @@ const UserCard = ({user}) => {
     }
     const handleNewSubmit = e => {
         e.preventDefault()
-            UserEditModel.update()
+            UserEditModel.update({
+                firstName: newFirstName,
+                lastName: newLastName,
+                email: newEmail
+            })
                 .then(data => {
                     console.log('Successful update', data)
+                    history.push('/profile')
                 })
         }
     return (
