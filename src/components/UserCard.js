@@ -1,7 +1,6 @@
 import React, { useEffect, useState } from 'react';
 import UserEditModel from '../models/userEdit'
-import {useHistory} from 'react-router-dom' 
-
+import {useHistory} from 'react-router-dom'
 
 const UserCard = ({user}) => {
     const [newFirstName, setNewFirstName] = useState('');

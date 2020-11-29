@@ -26,4 +26,4 @@ class BenefitModel {
 
 
 
-export default BenefitModel;
+export default BenefitModel

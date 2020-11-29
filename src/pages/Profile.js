@@ -8,11 +8,14 @@ const userId = localStorage.getItem('id')
 const Profile = (props) => {
   const [userBenefits, setUserBenefits] = useState([])
   const [userInfo, setUserInfo] = useState(null)
+  const [userId, setUserId] = useState(null)
+
 
   const fetchUserBenData = () => {
     UserBenefitModel.all().then(data => {
       setUserBenefits(data.userBenefits[0].benefits)
       setUserInfo(data.userBenefits[0].firstName)
+      setUserId(data.userBenefits[0].id)
     })
   }
 
@@ -22,7 +25,7 @@ const Profile = (props) => {
 
   const generatedUserBenList = () => {
     return userBenefits.map((userBenefit, index) => (
-      <Col xs={4}>
+      <Col xs={4} key={userBenefit.id} >
         <UserBenefitCard userBenefit={userBenefit} key={userBenefit.id} />
       </Col>
     ))
@@ -45,21 +48,5 @@ const Profile = (props) => {
     </div>
   )
 }
-
-
-
-
-
-
-
-// return (
-//   <div>
-//     {userBenefits.map((userBenefit, index) => {
-//       return <p>{userBenefit.name}</p>
-//     })}
-//   </div>
-
-// )
-// }
 
 export default Profile

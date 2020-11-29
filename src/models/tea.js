@@ -12,4 +12,4 @@ class TeaModel {
   }
 }
 
-export default TeaModel;
+export default TeaModel

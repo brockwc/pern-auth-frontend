@@ -1,4 +1,4 @@
-import React from 'react';
+import React from 'react'
 const OneBenefitCard = (props) => {
 
   return (
@@ -10,7 +10,7 @@ const OneBenefitCard = (props) => {
       <h3><u>Description:</u></h3>
         <p>{ props.allBenTeas.description }</p>
     </div>
-  );
+  )
 }
 
-export default OneBenefitCard;
+export default OneBenefitCard
