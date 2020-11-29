@@ -1,40 +1,14 @@
-<<<<<<< HEAD
-import React, { useState } from 'react'
-// import UserModel from '../models/user'
-=======
 import React, { useEffect, useState } from 'react';
 import UserEditModel from '../models/userEdit'
->>>>>>> submain
+import {useHistory} from 'react-router-dom'
 
 
-<<<<<<< HEAD
-    const [newFirstName, setNewFirstName] = useState('')
-    const [newLastName, setNewLastName] = useState('')
-    const [newEmail, setNewEmail] = useState('')
-
-    const handleNewFirstName = e => {
-        setNewFirstName(e.target.value)
-    }
-    const handleNewLastName = e => {
-        setNewLastName(e.target.value)
-    }
-    const handleNewEmail = e => {
-        setNewEmail(e.target.value)
-    }
-    
-    const handleNewSubmit = e => {
-        e.preventDefault()
-
-
-    }
-
-    return (
-
-=======
 const UserCard = ({user}) => {
     const [newFirstName, setNewFirstName] = useState('');
     const [newLastName, setNewLastName] = useState('');
     const [newEmail, setNewEmail] = useState('');
+
+    const history = useHistory()
 
     useEffect(() => {
         if(user){
@@ -55,13 +29,18 @@ const UserCard = ({user}) => {
     }
     const handleNewSubmit = e => {
         e.preventDefault()
-            UserEditModel.update()
+            UserEditModel.update({
+                firstName: newFirstName,
+                lastName: newLastName,
+                email: newEmail
+            })
                 .then(data => {
                     console.log('Successful update', data)
+                    history.push('/profile')
                 })
         }
     return (
->>>>>>> submain
+
         <div className="RegDiv">
             <h2>Update User Info</h2>
             <form onSubmit={handleNewSubmit}>
@@ -101,29 +80,12 @@ const UserCard = ({user}) => {
                         required
                     />
                 </div>
-<<<<<<< HEAD
-               
-=======
->>>>>>> submain
+
                 <button type="submit">Update</button>
             </form>
         </div>
     )
 }
-<<<<<<< HEAD
 
-export default UserCard
-
-
-
-// <div class="update">
-//     <form action="/update?_method=PUT" method="POST">
-//         <input class="form-control" name="firstName" type="text" placeholder="Name" value={props.user.firstName}>
-//             <input class="form-control" name="lastName" type="text" placeholder="Name" value={props.user.lastName}>
-//                 <input class="form-control" name="email" type="text" placeholder="Email" value={user.email}>
-//                     <button type="submit" class="btn btn-primary done">Done</button>
-//     </form>
-// </div>
-=======
 export default UserCard;
->>>>>>> submain
+

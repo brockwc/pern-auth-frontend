@@ -6,8 +6,7 @@ import UserBenefitModel from '../models/userBenefit'
 
 
 const UserBenefitCard = (props) => {
-    
-    console.log(props)
+   
 
     const delUserBen = () => {
         UserBenefitModel.delete(props.userBenefit.id).then(window.location.reload())

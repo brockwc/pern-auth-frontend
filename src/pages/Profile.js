@@ -53,20 +53,4 @@ const Profile = (props) => {
   )
 }
 
-
-
-
-
-
-
-// return (
-//   <div>
-//     {userBenefits.map((userBenefit, index) => {
-//       return <p>{userBenefit.name}</p>
-//     })}
-//   </div>
-
-// )
-// }
-
 export default Profile
