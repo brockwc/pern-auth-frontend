@@ -138,6 +138,7 @@ a {
 
 .carousel {
   width: 50%;
+  min-width: 350px;
   margin-left: 11px;
 }
 
@@ -173,5 +174,6 @@ a {
   .h3 {
     font-size: 1.25em;
   }
+
 }
 
