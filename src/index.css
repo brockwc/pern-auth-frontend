@@ -1,20 +1,30 @@
-@import url('https://fonts.googleapis.com/css2?family=Ubuntu:wght@700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300&display=swap');
+
+
+/* // #9E8E8E -- milk tea
+// #FFFFFF -- white. just whaite
+// #EBEBEB -- cup in the shade
+// #7E9E87 -- leafy green
+// #595959 -- black tea w/ milk */
 
 body {
   margin: 20px;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  font-family: 'Ubuntu', sans-serif;
-  text-shadow: 2px 1px rgb(222, 222, 222);
+  font-family: 'Montserrat', sans-serif;
+  color: #595959;
+  font-weight: 600;
 }
 
 h1 {
-  color:dodgerblue;
-  margin-bottom: 50px;
+  color:rgb(42, 59, 48);
+  margin: 10px 0px 14px 7px;
+  text-align: left;
+
 }
 
 h2 {
-  color: lightskyblue;
+  color: #9E8E8E;
   margin-bottom: 25px;
 }
 
@@ -29,8 +39,11 @@ h2 {
 
 button {
   border-radius: 10px;
-  border: solid 2px dodgerblue;
-  color: dodgerblue
+  border: solid 1px #7E9E87;
+  color: #7E9E87;
+  font-weight: 600;
+  font-size: .90em
+   
 }
 
 code {
@@ -58,8 +71,8 @@ a {
   margin: 5px;
   padding: 5px;
   padding-right: 10px;
-  background: rgba(209, 209, 209, 0.8);
-  border: solid 2px dodgerblue;
+  background: rgba(235, 235, 235, .8);
+  border: solid 2px #9E8E8E;
   border-radius: 10px;
   align-items: stretch;
 }
@@ -74,11 +87,11 @@ a {
 }
 
 .TeaCard > h3 {
-  color: dodgerblue;
+  color: #9E8E8E;
 }
 
 .RegDiv, .LogDiv {
-  color: dodgerblue;
+  color: #595959;
   width: 70%;
   margin: 0 auto;
 }
@@ -87,9 +100,9 @@ a {
   display: table;
   margin-left: auto;
   margin-right: auto;
-  background: rgba(209, 209, 209, 0.8);
+  background: #EBEBEB;
   padding: 15px;
-  border: solid 2px dodgerblue;
+  border: solid 2px #9E8E8E;
   border-radius: 10px;
 }
 
@@ -97,8 +110,47 @@ a {
   margin-right: 5px;
   display: table-cell;
 }
+ .RegInputBox {
+   border: none;
+   
+ }
 
+ .RegInputBox:focus {
+   outline: none;
+ }
 
+ .teasLink {
+   color: #9E8E8E
+ }
+
+ .teasLink:hover {
+  color: #776a6a
+}
+
+.benName {
+  font-size: 1.2em
+}
+
+.editUserLink {
+  float: right;
+  padding-right: 14px
+}
+
+.carousel {
+  width: 50%;
+  margin-left: 11px;
+}
+
+.mainTitle {
+  font-size: 5em;
+}
+
+.fade {
+  font-size: 13em;
+  color: #7E9E87;
+  font-weight: bold;
+  
+}
 
 /* Media Responsiveness */
 @media only screen and (max-width: 1050px) {
@@ -112,6 +164,7 @@ a {
   }
 }
 
+
 @media only screen and (max0width: 530px) {
   body {
     font-size: .75em;
@@ -121,3 +174,4 @@ a {
     font-size: 1.25em;
   }
 }
+

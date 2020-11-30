@@ -40,7 +40,7 @@ const Login = props => {
       <form onSubmit={ handleSubmit }>
         <div className="form-group">
           <label htmlFor="name">Email:</label>
-          <input 
+          <input className="RegInputBox"
             onChange={ handleEmail } 
             value={ email } 
             type="email" 
@@ -52,7 +52,7 @@ const Login = props => {
 
         <div className="form-group">
           <label htmlFor="password">Password:</label>
-          <input 
+          <input className="RegInputBox"
             onChange={ handlePassword } 
             value={ password } 
             type="password" 

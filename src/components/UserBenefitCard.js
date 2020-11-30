@@ -14,8 +14,8 @@ const UserBenefitCard = (props) => {
     
     return (
         <div className="UserBenefitCard">
-        <p>{ props.userBenefit.name }</p>
-        <Link to={`/allbenefits/${props.userBenefit.id}`}>See Teas</Link> <br />
+        <p className="benName">{ props.userBenefit.name }</p>
+        <Link className="teasLink" to={`/allbenefits/${props.userBenefit.id}`}>See Teas</Link> <br />
         <button onClick={delUserBen}>Remove Benefit</button>
     </div>
     )

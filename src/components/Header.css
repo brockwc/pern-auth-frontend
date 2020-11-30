@@ -1,12 +1,11 @@
 header {
-  background-color: dodgerblue;
+  background-color: #7E9E87;
   opacity: 0.8;
   text-align: left;
   padding: 20px 10px;
   margin: 10px;
   display: flex;
   justify-content: space-between;
-  text-shadow: 2px 1px black;
 }
 
 header a {

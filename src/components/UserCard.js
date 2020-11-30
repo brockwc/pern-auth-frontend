@@ -1,9 +1,6 @@
 import React, { useEffect, useState } from 'react';
 import UserEditModel from '../models/userEdit'
-<<<<<<< HEAD
-=======
 import {useHistory} from 'react-router-dom'
->>>>>>> submain
 
 
 const UserCard = ({user}) => {
@@ -48,7 +45,7 @@ const UserCard = ({user}) => {
             <form onSubmit={handleNewSubmit}>
                 <div className="form-group">
                     <label htmlFor="name">First Name:</label>
-                    <input
+                    <input className="RegInputBox"
                         onChange={handleNewFirstName}
                         value={newFirstName}
                         type="text"
@@ -60,7 +57,7 @@ const UserCard = ({user}) => {
                 </div>
                 <div className="form-group">
                     <label htmlFor="name">Last Name:</label>
-                    <input
+                    <input className="RegInputBox"
                         onChange={handleNewLastName}
                         value={newLastName}
                         type="text"
@@ -72,7 +69,7 @@ const UserCard = ({user}) => {
                 </div>
                 <div className="form-group">
                     <label htmlFor="name">Email:</label>
-                    <input
+                    <input className="RegInputBox"
                         onChange={handleNewEmail}
                         value={newEmail}
                         type="email"

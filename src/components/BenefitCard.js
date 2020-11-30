@@ -13,8 +13,8 @@ const BenefitCard = (props) => {
 
   return (
     <div className="BenefitCard">
-        <p>{ props.benefit.name }</p>
-        <Link to={`/allbenefits/${props.benefit.id}`}>See Teas</Link> <br />
+        <p className="benName">{ props.benefit.name }</p>
+        <Link className="teasLink" to={`/allbenefits/${props.benefit.id}`}>See Teas</Link> <br />
         <button onClick={addBenefit}>Save Benefit</button>
     </div>
   );
