@@ -30,4 +30,12 @@ export default class UserModel {
       credentials: 'include'
     })
   }
+
+  static deleteUser(data) {
+    return fetch(`${REACT_APP_API_URL}/auth/delete`, {
+      method: "DELETE",
+      credentials: 'include',
+      body: JSON.stringify(data)
+    })
+  }
 }

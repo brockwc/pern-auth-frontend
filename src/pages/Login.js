@@ -2,6 +2,8 @@ import React, { useState } from 'react'
 import { Redirect } from 'react-router-dom'
 import UserModel from '../models/user'
 
+
+
 const Login = props => {
   let [email, setEmail] = useState('')
   let [password, setPassword] = useState('')
@@ -35,37 +37,43 @@ const Login = props => {
   if (props.currentUser) return <Redirect to='/profile' />
 
   return (
-    <div>
-      <h4>Login</h4>
+    <div className="login-form card">
+      <h4 className="login-header">Login</h4>
       <form onSubmit={ handleSubmit }>
         <div className="form-group">
-          <label htmlFor="name">Email</label>
-          <input 
-            onChange={ handleEmail } 
-            value={ email } 
-            type="email" 
-            id="email" 
-            name="email" 
-            required  
-          />
+          <label htmlFor="email" className="col-form-label">Email</label>
+          <div className="col-sm-10">
+            <input 
+              onChange={ handleEmail } 
+              value={ email } 
+              type="email" 
+              id="email" 
+              name="email" 
+              required  
+            />
+          </div>
         </div>
-
         <div className="form-group">
-          <label htmlFor="password">Password</label>
-          <input 
-            onChange={ handlePassword } 
-            value={ password } 
-            type="password" 
-            id="password" 
-            name="password" 
-            required
-          />
-        
+          <label htmlFor="password" className="col-form-label">Password</label>
+          <div className="col-sm-10">
+            <input 
+              onChange={ handlePassword } 
+              value={ password } 
+              type="password" 
+              id="password" 
+              name="password" 
+              required
+            />
+          </div>
         </div>
-        <button type="submit">Login</button>
+        <button type="submit" className="btn pink-button login-button">Login</button>
       </form>
     </div>
   )
 }
+
+
+
+
 
 export default Login;
